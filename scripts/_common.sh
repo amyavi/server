@@ -11,10 +11,11 @@ if [ "$DEBUG" = 1 ]; then
         printf '[DEBUG] '
 
         # If shell supports FUNCNAME, print it
-        # The -20 is used to pad the function name with up to 20 spaces on the right.
+        # Aditionally, we limit the string length to 19, and add
+        # up to 20 spaces on the right
         if [ -n "${FUNCNAME+x}" ]; then
             # shellcheck disable=SC3054 # FUNCNAME support requires array support
-            printf '%-20s' "${FUNCNAME[1]}"
+            printf '%-*.*s' "20" "19" "${FUNCNAME[1]}"
         fi
 
         echo "$@"
