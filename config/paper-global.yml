@@ -78,6 +78,7 @@ misc:
   chat-threads:
     chat-executor-core-size: -1
     chat-executor-max-size: -1
+  client-interaction-leniency-distance: default
   compression-level: default
   fix-entity-position-desync: true
   lag-compensate-block-breaking: true
@@ -126,26 +127,19 @@ spam-limiter:
   recipe-spam-limit: 20
   tab-spam-increment: 1
   tab-spam-limit: 500
-timings:
+spark:
+  enable-immediately: false
   enabled: true
-  hidden-config-entries:
-  - database
-  - proxies.velocity.secret
-  history-interval: 300
-  history-length: 3600
-  server-name: Unknown Server
-  server-name-privacy: false
-  url: https://timings.aikar.co/
-  verbose: true
+timings:
+  enabled: false
 unsupported-settings:
-  allow-grindstone-overstacking: false
   allow-headless-pistons: true
   allow-permanent-block-break-exploits: true
   allow-piston-duplication: true
-  allow-tripwire-disarming-exploits: false
   allow-unsafe-end-portal-teleportation: false
   compression-format: ZLIB
   perform-username-validation: false
+  skip-vanilla-damage-tick-when-shield-blocked: false
 watchdog:
   early-warning-delay: 10000
   early-warning-every: 5000
